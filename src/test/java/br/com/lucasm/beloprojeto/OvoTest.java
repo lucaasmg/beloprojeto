@@ -1,10 +1,20 @@
 package br.com.lucasm.beloprojeto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
 public class OvoTest {
+	
+	@Test
+	public void fritarNaoQubradoTest() {
+		Ovo ovo = new Ovo(10);
+		Exception exception = assertThrows(RuntimeException.class, () -> {
+			ovo.fritar();
+		});
+		assertEquals("nao pode fritar ovo sem quebrar", exception.getMessage());
+	}
     
     @Test
 	public void getStatusCruTest() {

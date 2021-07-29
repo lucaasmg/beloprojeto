@@ -10,12 +10,9 @@ public class Ovo {
 	private Integer fritada;
 	private Boolean quebrado;
 
-	public Ovo(Integer tamanho) {
-		Scanner ler = new Scanner(System.in);
-		System.out.println("Informe o tamanho do ovo: ");
-		this.tamanho = Integer.valueOf(ler.next());
-		System.out.println("Informe quanto tempo deseja fritar o ovo: ");
-		this.fritada = Integer.valueOf(ler.next());
+	public Ovo(int tamanho) {
+		this.tamanho = tamanho;
+		this.fritada = 0;
 		this.quebrado = false;
 	}
 
